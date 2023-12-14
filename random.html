@@ -14,8 +14,8 @@
                 var index = Math.floor(Math.random() * imgs.length);
                 var img = imgs[index];
                 var imgElement = document.createElement('img');
-                imgElement.src = img;
-                document.body.appendChild("./imgs/" + imgElement);
+                imgElement.src = "./imgs/" + img;
+                document.body.appendChild(imgElement);
             });
     </script>
 </head>
