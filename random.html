@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Random Fox</title>
+    <script>
+        // fetch current domain + imgs.txt
+        fetch(window.location.origin + '/imgs.txt')
+            .then(function (response) {
+                return response.text();
+            })
+            .then(function (text) {
+                // split text into array
+                var imgs = text.split('\n');
+                // get random index
+                var index = Math.floor(Math.random() * imgs.length);
+                // get random image
+                var img = imgs[index];
+                // create image element
+                var imgElement = document.createElement('img');
+                // set image source
+                imgElement.src = img;
+                // append image to body
+                document.body.appendChild(imgElement);
+            });
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
